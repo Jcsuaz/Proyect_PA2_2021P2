@@ -27,11 +27,6 @@ public class UsuarioServiceImpl implements IUsuarioService {
 		u.setPassword(passwordEncoder.encode(u.getPassword()));
 		return usuarioDao.save(u);
 		
-	}
-
-	/* @Override
-	public Usuario registrar(Usuario u) {
-		u.setPassword(passwordEncoder.encode(u.getPassword()));
-		return usuarioDao.save(u);*/
+	}	
 			
 }

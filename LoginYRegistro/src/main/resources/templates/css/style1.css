@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+body
+{
+	margin:0px;
+	padding:0px;
+	font-family:sans-serif;
+	background:url(file:///C:/Users/jcsuazo.CORP/eclipse-workspace/LoginYRegistro/src/main/resources/templates/img/inicio.jpg);
+	background-size:cover
+}

@@ -19,6 +19,14 @@ public class LoginController {
 	@Autowired
 	private IUsuarioService usuarioService;
 	
+	@GetMapping("/auth/login")
+	public String login(Model model) {
+		model.addAttribute("usuario", new Usuario());
+		
+		return "login";
+		
+	}
+	
 	@GetMapping("/auth/registro")
 	public String registroForm(Model model) {
 		model.addAttribute("usuario", new Usuario());
