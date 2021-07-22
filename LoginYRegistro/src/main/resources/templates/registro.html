@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head th:replace="layouts/base-layout::head"></head>
+
+<body>
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header"><h4>Registro</h4>
+					<div class="card-body">
+					
+					<form th:action="@{/auth/registro}"th:object="${usuario}"method="POST">
+					<div class="row form-group">
+					<label class="col-md-3">Nombre</label>
+					<input type="text" class="form-control col-md-7"th:field="*{nombre}"/>
+					
+					</div>
+					
+					<div class="row form-group">
+					<label class="col-md-3">Apellidos</label>
+					<input type="text" class="form-control col-md-7"th:field="*{apellido}"/>
+					</div>
+					
+					<div class="row form-group">
+					<label class="col-md-3">email</label>
+					<input type="text" class="form-control col-md-7"th:field="*{email}"/>
+					</div>
+					
+					<div class="row form-group">
+					<label class="col-md-3">Nick</label>
+					<input type="text" class="form-control col-md-7"th:field="*{username}"/>
+					</div>
+					
+					<div class="row form-group">
+					<label class="col-md-3">Contraseña</label>
+					<input type="text" class="form-control col-md-7"th:field="*{password}"/>
+					</div>
+					
+					<div class="row form-group">					
+					<input type="submit" class="btn btn-success btn-block col-md-7 offset-3"value="Continuar"/>
+					</div>
+					
+					
+					
+					
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
