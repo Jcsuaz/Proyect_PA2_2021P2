@@ -1,23 +1,153 @@
-<!DOCTYPE html>
-<html>
-<head th:replace="layouts/base-layout::head"></head>
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>Formulario simple para reservar habitaciones</title>
+        <!-- Google font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&amp;subset=latin-ext" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+        <!-- Page style -->
+        <link rel="stylesheet" href="../css/pagestyle.css" type="text/css" />
+        <!-- Form style -->
+        <link rel="stylesheet" href="../css/formstyle.css" type="text/css" /> 
+    </head>
 
-<body>
+    <body>       
+        <div class="container">
+            <form th:action="@{/logout}"method="POST">
 
-	<div class="container mt-5">
-		<div class="row justify-content-center">
-		
-			<div class="col-md-4">
-			 	<div class="card-body">
-			 		<span th:if="${session.usuario!=null}">Bienvenido/a:  <span class="font-italic"th:text="${session.usuario.nombre}"></span> <span class="font-italic"th:text="${session.usuario.apellido}"></span></span>
-			 		
-			 		<form th:action="@{/logout}"method="POST">
-			 		<button type="submit"class="btn btn-primary mt-4">Salir</button>
-			 		</form>
-			 	</div>
-			</div>
-		
-		</div>
-	</div>
-</body>
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <span th:if="${session.usuario!=null}">Bienvenido/a:  <span class="font-italic"th:text="${session.usuario.nombre}"></span> <span class="font-italic"th:text="${session.usuario.apellido}"></span></span><br><br>                                                                                                        
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" style='margin-top:5px'>
+                    <div class="row">
+
+                        <article class="col-md-12">
+                            <!-- Start Subscribe Form -->
+                            <div class="row">
+                                <div class="col-md-10 offset-md-1">                                
+                                    <!-- Form Title -->
+                                    <div class="form-heading text-center">
+                                        <div class="title">Formulario para reservar habitaciones</div>
+                                    </div>
+
+                                    <div class='row' id="resultados_ajax"></div>
+                                    <!-- First & Last Name -->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Nombres</label>
+                                            <input type="text" name="nombres" id="nombres" required /> 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Apellidos</label>
+                                            <input type="text" name="apellidos" id="apellidos" required /> 
+                                        </div>
+                                    </div>
+                                    <!-- Email & Phone  -->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Correo electrónico</label>
+                                            <input type="email" name="email" id="email" required/> 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Teléfono</label>
+                                            <input type="text"  name="telefono" id="telefono" required /> 
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <label>Calle</label>
+                                            <input type="text" name="calle" id="calle" required /> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Nº</label>
+                                            <input type="text" name="calle_numero" id="calle_numero" required /> 
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Ciudad</label>
+                                            <input type="text" name="ciudad" id="ciudad" required /> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Código postal</label>
+                                            <input type="text" name="codigo_postal" id="codigo_postal" required /> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>País</label>
+                                            <input type="text" name="pais" id="pais" required /> 
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Fecha ingreso</label>
+                                            <input type="date" name="ingreso" fingreso="ingreso" required /> 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Fecha salida</label>
+                                            <input type="date" name="salida" fsalida="salida" required/> 
+                                        </div>	
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Personas</label>
+                                            <select class='form-control' required name="personas" id="personas">
+                                                <option value="" selected="">--Selecciona--</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Habitaciones</label>
+                                            <select class="form-control" required name="habitaciones" id="habitaciones">
+                                                <option value="" selected="">--Selecciona--</option>                                            
+                                                <option value="Individual">Individual</option>
+                                                <option value="Doble">Doble</option>
+                                                <option value="Triple">Triple</option>
+                                                <option value="Suitejr">Suite Jr.</option>
+                                                <option value="Suited">Suite Doble</option>
+                                                <option value="Presidencial">Presindencial</option>
+                                            </select> 
+                                        </div>	
+                                    </div>
+                                    <br>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <label>En caso de requerir atención especial, por favor informenos.</label>
+                                            <input type="textarea" name="comentario" id="comentario" >                                                                                                                        
+                                            <button type="submit"class="btn btn-primary mt-4">Enviar</button>
+                                        </div>
+                                    </div>                                                                  
+
+                                    </article>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                    </div>       
+
+            </form>
+
+    </body>   
+
 </html>

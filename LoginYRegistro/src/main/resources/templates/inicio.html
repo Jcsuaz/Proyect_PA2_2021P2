@@ -1,29 +1,60 @@
 <!DOCTYPE html>
-<html>
-<head th:replace="layouts/base-layout::head"></head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<body class="full-cover-background" style="background-image:url(img/inicio.jpg);">
+<html lang="en-US">
+<title>Welcome</title>
 
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style>
+        html, body {
+            margin: 0;
+            padding: 0;        
+            
+        }        
+.main {
+            background-image: url(https://marriottnews.brightspotcdn.com/af/d5/b891f2b744ba8eed4c83b5d79392/zbg-40-the-st.%20Regis%20Punta%20Mita.jpg);
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+    </style>
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>Formulario simple para reservar habitaciones</title>
+        <!-- Google font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&amp;subset=latin-ext" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+        <!-- Page style -->
+        <link rel="stylesheet" href="../css/pagestyle.css" type="text/css" />
+        <!-- Form style -->
+        <link rel="stylesheet"s href="../css/formstyle.css" type="text/css" /> 
+    </head>
+    
+    
+        
+    <body>
+        <div class="main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 		<div class="collapse navbar-collapse"id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto" >
 
 				<li class="nav-item ml-5">
-					<a th:href="@{/auth/login}">Login</a>		
+                                    <a th:href="@{/auth/login}"><h6>Login</h6></a>
 				</li>	
 		
 				<li class="nav-item ml-5">
-					<a th:href="@{/auth/registro}">Registro</a>		
-				</li>
+					<a th:href="@{/auth/registro}"><h6>Registro</h6></a>		
+				</li>                                
 			</ul>
+                                                               
 			
-		</div>
+		</div>                                          
 		
-	</nav>
-
-
-
+	</nav>         
+        </div>    
 </body>
 </html>

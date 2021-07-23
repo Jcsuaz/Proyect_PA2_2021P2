@@ -1,0 +1,132 @@
+.contenedor
+{
+  width: 1000px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FFFFFF;
+}
+
+.titulo {
+            border: 3px solid #fff;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            color: #fff;
+            top: calc(80vh - 45%);
+            left: 50%;
+            position: absolute;
+            margin-left: -150px;
+        }
+        
+.titulol {
+            border: 3px solid #fff;
+            width: 400px;
+            height: 200px;
+            text-align: left;
+            color: #fff;
+            top: calc(80vh - 45%);
+            left: 50%;
+            position: absolute;
+            margin-left: -150px;
+        }
+        
+.logout {
+    background-image: url(https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/05/20152451/Mandarin-Oriental-Hong-Kong-3.jpg);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.imagen2
+{
+  padding-left:500px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+h4 {
+  color: cyan;
+}
+
+.TablaPrincipal
+{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.boton_1{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #636363;
+    background-color: #e8e8e8;
+    border-radius: 15px;
+    border: 1px double #9c9c9c;
+  }
+  .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+  .boton_2{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #ffffff;
+    background-color: #13b71e;
+    border-radius: 15px;
+    border: 1px double #13b71e;
+  }
+  .boton_2:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+
+ .formulario_text_200px{ width:180px;  solid #a6c9e2; padding:2px 0px 2px 4px; } 
+
+.formulario_select_10px{ width:40px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_60px{ width:60px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_80px{ width:80px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_100px{ width:108px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_150px{ width:150px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_180px{ width:180px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_180px{ width:170px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_200px{ width:208px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_250px{ width:250px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_300px{ width:300px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_350px{ width:350px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+.formulario_select_400px{ width:408px; border:2px solid #a6c9e2; background:#f6f6f6; color:#222222; }
+
+.formulario_input_60px{ width:60px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_70px{ width:70px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_90px{ width:90px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_100px{ width:100px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_120px{ width:120px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_140px{ width:140px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_150px{ width:150px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_200px{ width:200px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_250px{ width:250px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_300px{ width:300px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_330px{ width:330px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_400px{ width:400px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
+.formulario_input_480px{ width:480px; border:2px solid #a6c9e2; padding:2px 0px 2px 4px; background:#f6f6f6; color:#222222; }
